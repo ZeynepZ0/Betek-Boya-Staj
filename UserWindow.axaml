@@ -1,0 +1,159 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.UserWindow"
+        Width="600"
+        Height="800"
+        Title="Kullanıcı Girişi"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <Grid>
+        
+    <!-- ===================================-->
+    <!-- ARKA PLAN RESMİ BURASI-->
+    <!-- ===================================-->
+
+    <Image
+        Source="avares://Paint/Assets/betek4.jpg"
+        Stretch="UniformToFill"/>
+
+        
+    <!-- ===================================-->    
+    <!-- KULLANICI GİRİŞ FORMU -->
+     <!-- ===================================-->
+
+    <Border
+        Width="400"
+        Height="500"
+        Padding="35"
+        CornerRadius="25"
+        Background="#DDF8F8F8"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Margin="0,75,0,0">
+
+        <StackPanel Spacing="20">
+
+<!-- BAŞLIK -->
+
+<Border
+    Width="350"
+    Height="55"
+    Background="#F4FFFFFF"
+    BorderBrush="#D0D7DE"
+    BorderThickness="2"
+    CornerRadius="15"
+    HorizontalAlignment="Center">
+
+    <TextBlock
+        Text="Kullanıcı Girişi"
+        FontSize="22"
+        FontWeight="Bold"
+        Foreground="Black"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
+
+</Border>
+
+<!-- AD -->
+
+<TextBox
+    x:Name="NameTextBox"
+        Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    Watermark="Adınızı giriniz"
+    HorizontalAlignment="Center"/>
+
+<!-- SOYAD -->
+
+<TextBox
+    x:Name="SurnameTextBox"
+    Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    Watermark="Soyadınızı giriniz"/>
+
+<!-- ŞİFRE -->
+
+<TextBox
+    x:Name="PasswordTextBox"
+        Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    PasswordChar="●"
+    Watermark="Şifrenizi giriniz"/>
+
+<!-- GİRİŞ YAP -->
+
+<Button
+    Content="Giriş Yap"
+    Width="170"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    BorderBrush="Gray"
+    BorderThickness="1"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    HorizontalAlignment="Center"
+    Click="LoginButton_Click"/>
+
+<!-- Kayıt Ol-->
+
+<Button
+    Content="Kayıt Ol"
+    Width="170"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    BorderBrush="Gray"
+    BorderThickness="1"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    HorizontalAlignment="Center"
+    Click="RegisterButton_Click"/>
+
+
+<!-- GERİ -->
+
+<Button
+    Content="← Geri"
+    Width="170"
+    Height="42"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Top"
+    Margin="0,3,0,0"
+    Background="#CCFFFFFF"
+    Foreground="#10233F"
+    BorderBrush="Gray"
+    BorderThickness="1"
+    CornerRadius="8"
+    FontSize="16"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Click="GeriButton_Click"/>
+
+<!-- SONUÇ MESAJI -->
+
+<TextBlock
+    x:Name="ResultTextBlock"
+    FontSize="15"
+    FontWeight="SemiBold"
+    Foreground="#D64545"
+    HorizontalAlignment="Center"
+    TextAlignment="Center"
+    TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+
+</Window>

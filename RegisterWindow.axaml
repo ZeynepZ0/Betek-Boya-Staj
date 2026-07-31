@@ -1,0 +1,131 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.RegisterWindow"
+        Width="600"
+        Height="850"
+        Title="Kayıt Ol"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+<Grid>
+
+    <Image
+        Source="avares://Paint/Assets/betek4.jpg"
+        Stretch="UniformToFill"/>
+
+    <Border
+        Width="420"
+        Height="560"
+        Padding="35"
+        Margin="0,30,0,0"
+        CornerRadius="25"
+        Background="#DDF8F8F8"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+
+        <StackPanel Spacing="18">
+
+    <Border
+        Width="350"
+        Height="55"
+        Background="#F4FFFFFF"
+        BorderBrush="#D0D7DE"
+        BorderThickness="2"
+        CornerRadius="15">
+
+    <!-- BAŞLIK -->
+
+        <TextBlock
+            Text="Kullanıcı Kaydı"
+            FontSize="22"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+
+    </Border>
+
+
+    <!-- İSİM -->
+
+    <TextBox
+        x:Name="NameTextBox"
+            Width="300"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        Watermark="Adınız"/>
+
+<!-- SOYAD -->
+    <TextBox
+        x:Name="SurnameTextBox"
+            Width="300"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        Watermark="Soyadınız"/>
+
+<!-- ŞİFRE -->
+    <TextBox
+        x:Name="PasswordTextBox"
+            Width="300"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        PasswordChar="●"
+        Watermark="Şifre"/>
+
+<!-- ŞİFRE TEKRAR -->
+    <TextBox
+        x:Name="PasswordAgainTextBox"
+            Width="300"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        PasswordChar="●"
+        Watermark="Şifre Tekrar"/>
+
+<!-- KAYIT OL BUTONU-->
+    <Button
+        Content="Kayıt Ol"
+            Width="170"
+        Height="42"
+            Margin=" 80,0,0,0"
+        Background="White"
+        Foreground="Black"
+        BorderBrush="Gray"
+        BorderThickness="1"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="RegisterButton_Click"/>
+
+
+<!-- GERİ AL BUTONU -->
+    <Button
+        Content="← Geri"
+        Width="170"
+        Height="42"
+        Margin="80,0,0,0"
+        Background="White"
+        Foreground="Black"
+        BorderBrush="Gray"
+        BorderThickness="1"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="BackButton_Click"/>
+
+
+    <!-- SONUÇ -->
+    <TextBlock
+        x:Name="ResultTextBlock"
+        HorizontalAlignment="Center"
+        TextAlignment="Center"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+
+</Window>

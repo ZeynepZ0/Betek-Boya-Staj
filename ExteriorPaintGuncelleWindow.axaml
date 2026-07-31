@@ -1,0 +1,201 @@
+<!-- =================================-->
+<!-- DIŞ CEPHE BOYASI GÜNCELLEME FORMU-->
+<!-- =================================-->
+
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.ExteriorPaintGuncelleWindow"
+        Width="500"
+        Height="680"
+        Title="Dış Cephe Boyası Güncelle"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+
+<Border
+    Background="#F4F6F9"
+    Padding="30">
+
+    <Border
+        Background="White"
+        BorderBrush="#D8E0E8"
+        BorderThickness="1"
+        CornerRadius="15"
+        Padding="30">
+
+<Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+<!-- BAŞLIK -->
+
+<TextBlock
+    Grid.Row="0"
+    Text="Dış Cephe Boyası Güncelle"
+    FontSize="25"
+    FontWeight="Bold"
+    Foreground="#10233F"
+    HorizontalAlignment="Center"
+    Margin="0,0,0,25"/>
+
+<!-- BOYA ADI -->
+
+<StackPanel
+    Grid.Row="1"
+    Spacing="7"
+    Margin="0,0,0,15">
+
+<TextBlock
+    Text="Boya Adı"
+    FontSize="15"
+    FontWeight="SemiBold"
+    Foreground="#10233F"/>
+
+<TextBox
+    x:Name="PaintNameTextBox"
+    Height="42"
+    Watermark="Boya adını giriniz"/>
+
+</StackPanel>
+
+<!-- AÇIKLAMA -->
+
+<StackPanel
+    Grid.Row="2"
+    Spacing="7"
+    Margin="0,0,0,15">
+
+<TextBlock
+    Text="Açıklama"
+    FontSize="15"
+    FontWeight="SemiBold"
+    Foreground="#10233F"/>
+
+<TextBox
+    x:Name="ExplanationTextBox"
+    Height="90"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    Watermark="Boya açıklamasını giriniz"/>
+
+</StackPanel>
+
+<!-- STOK -->
+
+<StackPanel
+Grid.Row="3"
+Spacing="7"
+Margin="0,0,0,15">
+
+<TextBlock
+    Text="Stok Miktarı"
+    FontSize="15"
+    FontWeight="SemiBold"
+    Foreground="#10233F"/>
+
+<NumericUpDown
+    x:Name="StockNumericUpDown"
+    Height="42"
+    Minimum="0"
+    Maximum="100000"
+    Increment="1"
+    FormatString="0"/>
+
+</StackPanel>
+
+<!-- FİYAT -->
+
+<StackPanel
+    Grid.Row="4"
+    Spacing="7"
+    Margin="0,0,0,15">
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontSize="15"
+        FontWeight="SemiBold"
+        Foreground="#10233F"/>
+
+    <NumericUpDown
+        x:Name="PriceNumericUpDown"
+        Height="42"
+        Minimum="0"
+        Maximum="1000000"
+        Increment="1"
+        FormatString="0.00"/>
+
+</StackPanel>
+
+<!-- FOTOĞRAF -->
+
+<StackPanel
+    Grid.Row="5"
+    Spacing="7"
+    Margin="0,0,0,20">
+
+<TextBlock
+    Text="Fotoğraf Yolu"
+    FontSize="15"
+    FontWeight="SemiBold"
+    Foreground="#10233F"/>
+
+<TextBox
+    x:Name="PictureTextBox"
+    Height="42"
+    Watermark="avares://Paint/Assets/resim.jpeg"/>
+
+</StackPanel>
+
+<!-- SONUÇ MESAJI -->
+
+<StackPanel
+    Grid.Row="6"
+    Spacing="15">
+
+    <TextBlock
+        x:Name="ResultTextBlock"
+        FontSize="14"
+        FontWeight="SemiBold"
+        TextAlignment="Center"
+        TextWrapping="Wrap"/>
+
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="12">
+
+
+<!-- DIŞ CEPHE BOYASI GÜNCELLEME İPTAL BUTONU-->        
+    <Button
+        Grid.Column="0"
+        Content="İptal"
+        Height="45"
+        Background="#607085"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="CancelButton_Click"/>
+
+<!-- DIŞ CEPHE BOYASI GÜNCELLME GÜNCELLE BUTONU-->            
+    <Button
+        Grid.Column="1"
+        Content="Güncelle"
+        Height="45"
+        Background="#1677FF"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="UpdateButton_Click"/>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </Border>
+
+</Window>

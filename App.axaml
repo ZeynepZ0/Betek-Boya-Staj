@@ -1,0 +1,13 @@
+<!--  AVALONİA UYGULAMASININ ANA YAPILANDIRMA DOSYASI BURASI-->
+
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Paint.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+        <FluentTheme />  <!-- Avalonia'nın hazır tasarım paketini yüklüyor-->
+    </Application.Styles>
+</Application>
+

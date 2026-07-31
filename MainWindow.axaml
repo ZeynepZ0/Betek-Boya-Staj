@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.MainWindow"
+        Width="600"    
+         Height="800"
+        Title="Betek Boya Kimya Sanayi A.Ş">
+
+    <Grid>
+
+        <!-- ARKA PLAN RESMİ -->
+        <Image
+            Source="avares://Paint/Assets/betek.jpg"
+            Stretch="UniformToFill"/>
+
+     <!-- ============================================== -->
+        <!-- YARI SAYDAM ALAN BURASI -->
+     <!-- ============================================== -->
+       <Border
+    Width="390"
+    Padding="20"
+    CornerRadius="20"
+    Background="#CCFFFFFF"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    Margin="0,135,0,0">
+            
+
+    <StackPanel Spacing="15">
+
+        <TextBlock
+            Text="Betek Boya'ya Hoş Geldiniz!"
+            FontSize="25"
+            FontWeight="Bold"
+            Foreground="Black"
+            TextAlignment="Center"
+            HorizontalAlignment="Center"
+             Margin="0,0,0,20"/>
+
+     <!-- ============================================== -->       
+     <!-- YÖNETİCİ GİRİŞİ BUTONU  -->
+     <!-- ============================================== -->   
+
+        <Button
+        Content="Yönetici Girişi"
+        Width="170"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        BorderBrush="#A9A9A9"
+        BorderThickness="1.5"
+        CornerRadius="8"
+        FontWeight="SemiBold"
+        FontSize="14"
+            Margin="0,3,0,0"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        HorizontalAlignment="Center"
+        Click="ShowButton_Click"/>
+
+
+        <!-- ============================================== -->
+        <!-- KULLANICI GİRİŞİ BUTONU -->
+        <!-- ============================================== -->
+        <Button
+        Content="Kullanıcı Girişi"
+        Width="170"
+        Height="42"
+        Background="White"
+        Foreground="Black"
+        BorderBrush="#A9A9A9"
+        BorderThickness="1.5"
+        CornerRadius="8"
+        FontWeight="SemiBold"
+        FontSize="14"
+            Margin="0,3,0,0"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        HorizontalAlignment="Center"
+        Click="UserLoginButton_Click"/>
+        
+     <!-- SONUÇ -->
+        <TextBlock
+            x:Name="ResultTextBlock"
+            Foreground="Black"
+            FontSize="16"
+            FontWeight="SemiBold"
+            TextAlignment="Center"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+
+</Window>

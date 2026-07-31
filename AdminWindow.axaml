@@ -1,0 +1,139 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.AdminWindow"
+        Width="600"
+        Height="800"
+        Title="Yönetici Girişi">
+
+<Grid>
+
+
+<!-- ÇİZGİLİ ARKA PLAN RESMİ -->
+<Image
+    Source="avares://Paint/Assets/betek4.jpg"
+    Stretch="UniformToFill"/>
+
+
+<!-- FORMUN ARKASINDAKİ YARI SAYDAM ALAN-->
+<Border
+    Width="400"
+    Height="430"
+    Background="#CCFFFFFF"
+    BorderBrush="#D9D9D9"
+    BorderThickness="1"
+    CornerRadius="20"
+    Padding="30"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center">
+
+<StackPanel
+    Width="350"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    Spacing="15">
+
+
+<!-- YÖNETİCİ GİRİŞİ BAŞLIĞI -->
+
+<Border
+    Width="280"
+    Height="60"
+    Background="#F2FFFFFF"
+    BorderBrush="#D9D9D9"
+    BorderThickness="1.5"
+    CornerRadius="12"
+    HorizontalAlignment="Center"
+    Margin="0,0,0,20">
+
+    <TextBlock
+        Text="Yönetici Girişi"
+        FontSize="22"
+        FontWeight="Bold"
+        Foreground="Black"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
+
+</Border>
+
+<!-- YÖNETİCİ ADI -->
+    
+<TextBox
+    x:Name="AdminNameTextBox"
+    Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    Watermark="Adınızı giriniz"/>
+
+<!-- YÖNETİCİ SOYADI -->
+
+<TextBox
+    x:Name="AdminSurnameTextBox"
+    Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    Watermark="Soyadınızı giriniz"/>
+
+<!-- YÖNETİCİ ŞİFRESİ -->
+<TextBox
+    x:Name="AdminPasswordTextBox"
+    Width="300"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    PasswordChar="●"
+    Watermark="Şifrenizi giriniz"/>
+
+<!-- GİRİŞ YAP BUTONU -->
+<Button
+    Content="Giriş Yap"
+    Width="170"
+    Height="42"
+    Background="White"
+    Foreground="Black"
+    BorderBrush="Gray"
+    BorderThickness="1"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    HorizontalAlignment="Center"
+    Click="AdminLoginButton_Click"/>
+
+    <!-- GERİ BUTONU -->
+
+<Button
+    Content="← Geri"
+    Width="170"
+    Height="42"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Top"
+    Margin="0,3,0,0"
+    Background="#CCFFFFFF"
+    Foreground="#10233F"
+    BorderBrush="Gray"
+    BorderThickness="1"
+    CornerRadius="8"
+    FontSize="16"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Click="GeriButton_Click"
+    />
+
+    <!-- SONUÇ MESAJI  -->
+        
+    <TextBlock
+        x:Name="AdminResultTextBlock"
+        FontSize="15"
+        Foreground="Black"
+        TextAlignment="Center"
+        HorizontalAlignment="Center"
+        TextWrapping="Wrap"/>
+
+        </StackPanel>
+
+    </Border>
+
+</Grid>
+
+</Window>

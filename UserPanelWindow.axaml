@@ -1,0 +1,1136 @@
+<!-- ================================================ -->
+<!-- KULLANICI PANELİ -->
+<!-- ================================================ -->  
+
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="using:Paint.Views"
+        xmlns:models="using:Paint.Models"
+        x:Class="Paint.Views.UserPanelWindow"
+        x:DataType="views:UserPanelWindow"
+        Width="1100"
+        Height="800"
+        MinWidth="900"
+        MinHeight="650"
+        Title="Kullanıcı Paneli">
+
+<Grid Background="#F4F6F9">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+<!-- ================================================ -->  
+<!-- ================= DROPDOWN ================= -->
+<!-- ================================================ -->  
+
+    <Border
+    Grid.Column="0"
+    Background="#10233F">
+
+    <Grid Margin="10">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Row="0">
+
+    <!-- YUVARLAK PROFİL FOTOĞRAFI -->
+    <Border
+        Width="85"
+        Height="85"
+        CornerRadius="43"
+        ClipToBounds="True"
+        HorizontalAlignment="Center"
+        Margin="0,15,0,8">
+
+        <Image
+            Source="avares://Paint/Assets/kullanıcı2.jpg"
+            Width="85"
+            Height="85"
+            Stretch="UniformToFill"/>
+    </Border>
+
+    <!-- BETEK -->
+    <TextBlock
+        Text="BETEK"
+        FontSize="30"
+        FontWeight="Bold"
+        Foreground="White"
+        HorizontalAlignment="Center"
+        Margin="0,5,0,5"/>
+
+    <!-- KULLANICI PANELİ -->
+    <TextBlock
+        Text="Kullanıcı Paneli"
+        FontSize="17"
+        Foreground="#C7D4E5"
+        HorizontalAlignment="Center"
+        Margin="0,0,0,30"/>
+
+    </StackPanel>
+
+    <StackPanel
+        Grid.Row="1"
+        Spacing="12">
+
+    <Button
+        x:Name="InteriorMenuButton"
+        Content="İç Cephe Boyaları"
+    Width="180"
+    Height="50"
+    Background="#1677FF"
+    Foreground="White"
+    BorderBrush="#4D9BFF"
+    BorderThickness="2"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Padding="0"
+        Click="InteriorMenuButton_Click"/>
+
+
+    <Button
+        x:Name="ExteriorMenuButton"
+        Content="Dış Cephe Boyaları"
+    Width="180"
+    Height="50"
+    Background="#1677FF"
+    Foreground="White"
+    BorderBrush="#4D9BFF"
+    BorderThickness="2"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Padding="0"
+        Click="ExteriorMenuButton_Click"/>
+
+    <Button
+        x:Name="MaterialsMenuButton"
+        Content="Hammaddeler"
+    Width="180"
+    Height="50"
+    Background="#1677FF"
+    Foreground="White"
+    BorderBrush="#4D9BFF"
+    BorderThickness="2"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Padding="0"
+        Click="MaterialsMenuButton_Click"/>
+
+        <Button
+    x:Name="FavoritesMenuButton"
+    Content="Favoriler"
+    Width="180"
+    Height="50"
+    Background="#10233F"
+    Foreground="White"
+    BorderBrush="#00A8FF"
+    BorderThickness="2"
+    CornerRadius="8"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Padding="0"
+    Click="FavoritesMenuButton_Click"/>
+
+
+
+    <Button
+        x:Name="CartMenuButton"
+        Content="Sepet"
+        Width="180"
+        Height="50"
+        Background="#1677FF"
+        Foreground="White"
+        BorderBrush="#4D9BFF"
+        BorderThickness="2"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="CartMenuButton_Click"/>
+
+    </StackPanel>
+
+    <Button
+        Grid.Row="2"
+        Content="Çıkış Yap"
+        Height="48"
+        Background="#EF3340"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="LogoutButton_Click"/>
+
+            </Grid>
+
+        </Border>
+<!-- ============================================= -->
+<!-- ================= SAĞ İÇERİK ================= -->
+
+    <Grid
+        Grid.Column="1"
+        Margin="25">
+
+<!-- ================= İÇ CEPHE ================= -->
+
+<Grid
+    x:Name="InteriorPanel"
+    IsVisible="True">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Margin="0,0,0,20">
+
+        <TextBlock
+            Text="İç Cephe Boyaları"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="#10233F"
+            Margin="0,30,0,0"/>
+
+        <TextBlock
+            Text="İç cephe boyalarını inceleyip sepete ekleyebilirsiniz."
+            FontSize="16"
+            Foreground="#607085"
+            Margin="0,20,0,0"/>
+
+    </StackPanel>
+
+    <ScrollViewer
+        Grid.Row="1"
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled">
+
+<StackPanel>
+
+    <ItemsControl ItemsSource="{Binding InteriorPaints}">
+
+        <ItemsControl.ItemsPanel>
+
+            <ItemsPanelTemplate>
+
+                <WrapPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"/>
+
+            </ItemsPanelTemplate>
+
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+
+            <DataTemplate x:DataType="models:InteriorPaint">
+
+<Border
+    Width="245"
+    Height="410"
+    Background="White"
+    BorderBrush="#D8E0E8"
+    BorderThickness="1"
+    CornerRadius="10"
+    Padding="15"
+    Margin="0,0,15,15">
+
+    <Grid RowDefinitions="165,Auto,*,Auto,Auto">
+
+    <!-- RESİM -->
+
+    <Border
+        Grid.Row="0"
+        Background="#FAFAFA"
+        CornerRadius="8">
+
+        <Image
+    Source="{Binding PaintImage}"
+    Width="200"
+    Height="155"
+    Stretch="Uniform"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"/>
+
+    </Border>
+
+    <!-- BOYA ADI -->
+
+    <TextBlock
+        Grid.Row="1"
+        Text="{Binding InPaintName}"
+        FontSize="16"
+        FontWeight="Bold"
+        Margin="0,10,0,4"
+        TextWrapping="Wrap"/>
+
+    <!-- AÇIKLAMA -->
+
+    <TextBlock
+        Grid.Row="2"
+        Text="{Binding Explanation}"
+        FontSize="13"
+        Foreground="#666666"
+        TextWrapping="Wrap"/>
+
+    <!-- STOK VE FİYAT -->
+
+    <StackPanel
+        Grid.Row="3"
+        Spacing="8"
+        Margin="0,12,0,12">
+
+        <Grid ColumnDefinitions="Auto,*">
+
+            <TextBlock
+                Text="Stok"
+                FontWeight="SemiBold"/>
+
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Spacing="4">
+
+        <TextBlock
+            Text="{Binding StockAmount}"/>
+
+        <TextBlock
+            Text="Kova"/>
+
+    </StackPanel>
+
+</Grid>
+
+<Grid ColumnDefinitions="Auto,*">
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding UnitPrice,
+                StringFormat={}{0:0.00}}"/>
+
+            <TextBlock Text="TL"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</StackPanel>
+
+    <!-- ================================= -->
+    <!-- FAVORİLER BUTONU -->
+    <!-- ================================== -->
+
+    <Grid
+    Grid.Row="4"
+    ColumnDefinitions="60,*"
+    ColumnSpacing="8">
+
+    <Button
+        Grid.Column="0"
+        Content="&#x2764;"
+        Width="50"
+        Height="40"
+        Background="#BA1F2C"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="7"
+        FontSize="18"
+        FontWeight="Bold"
+        HorizontalAlignment="Left"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="AddInteriorToFavorites_Click"/>
+
+
+     <!-- ================================= -->
+    <!-- SEPETE EKLE BUTONU -->
+    <!-- ================================== -->     
+    <Button
+        Grid.Column="1"
+        Content="Sepete Ekle"
+        Height="40"
+        Background="#29A847"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="7"
+        FontWeight="SemiBold"
+        HorizontalAlignment="Stretch"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="AddInteriorToCart_Click"/>
+
+    </Grid>
+
+</Grid>
+
+</Border>
+
+</DataTemplate>
+
+</ItemsControl.ItemTemplate>
+
+</ItemsControl>
+
+<TextBlock
+    x:Name="InteriorResultTextBlock"
+    FontSize="15"
+    FontWeight="SemiBold"
+    HorizontalAlignment="Center"
+    TextAlignment="Center"
+    Margin="0,5,0,15"/>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Grid>
+
+<!-- ================================= -->
+<!-- DIŞ CEPHE -->
+<!-- ================================== -->
+
+<Grid
+    x:Name="ExteriorPanel"
+    IsVisible="False">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Margin="0,0,0,20">
+
+        <TextBlock
+            Text="Dış Cephe Boyaları"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="#10233F"
+            Margin="0,30,0,0"/>
+
+        <TextBlock
+            Text="Dış cephe boyalarını inceleyip sepete ekleyebilirsiniz."
+            FontSize="16"
+            Foreground="#607085"
+            Margin="0,20,0,0"/>
+
+    </StackPanel>
+
+    <ScrollViewer
+        Grid.Row="1"
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled">
+
+<StackPanel>
+
+    <ItemsControl ItemsSource="{Binding ExteriorPaints}">
+
+        <ItemsControl.ItemsPanel>
+
+            <ItemsPanelTemplate>
+
+                <WrapPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"/>
+
+            </ItemsPanelTemplate>
+
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+
+            <DataTemplate x:DataType="models:ExteriorPaint">
+
+    <Border
+        Width="245"
+        Height="410"
+        Background="White"
+        BorderBrush="#D8E0E8"
+        BorderThickness="1"
+        CornerRadius="10"
+        Padding="15"
+        Margin="0,0,15,15">
+
+        <Grid RowDefinitions="165,Auto,*,Auto,Auto">
+
+            <!-- RESİM -->
+
+            <Border
+                Grid.Row="0"
+                Background="#FAFAFA"
+                CornerRadius="8">
+
+                <Image
+            Source="{Binding PaintImage}"
+            Width="200"
+            Height="155"
+            Stretch="Uniform"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+
+            </Border>
+
+    <!-- BOYA ADI -->
+
+    <TextBlock
+        Grid.Row="1"
+        Text="{Binding ExPaintName}"
+        FontSize="16"
+        FontWeight="Bold"
+        Margin="0,10,0,4"
+        TextWrapping="Wrap"/>
+
+    <!-- AÇIKLAMA -->
+
+    <TextBlock
+        Grid.Row="2"
+        Text="{Binding Explanation}"
+        FontSize="13"
+        Foreground="#666666"
+        TextWrapping="Wrap"/>
+
+    <!-- STOK VE FİYAT -->
+
+    <StackPanel
+        Grid.Row="3"
+        Spacing="8"
+        Margin="0,12,0,12">
+
+        <Grid ColumnDefinitions="Auto,*">
+
+    <TextBlock
+        Text="Stok"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding StockAmount}"/>
+
+        <TextBlock
+            Text="Kova"/>
+
+    </StackPanel>
+
+</Grid>
+
+<Grid ColumnDefinitions="Auto,*">
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding UnitPrice,
+                StringFormat={}{0:0.00}}"/>
+
+        <TextBlock Text="TL"/>
+
+    </StackPanel>
+
+</Grid>
+
+</StackPanel>
+
+<!-- FAVORİLER BUTONU -->
+
+<Grid
+    Grid.Row="4"
+    ColumnDefinitions="60,*"
+    ColumnSpacing="8">
+
+    <Button
+        Grid.Column="0"
+        Content="&#x2764;"
+        Width="50"
+        Height="40"
+        Background="#BA1F2C"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="7"
+        FontSize="18"
+        FontWeight="Bold"
+        HorizontalAlignment="Left"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="AddExteriorToFavorites_Click"/>
+
+    <Button
+        Grid.Column="1"
+        Content="Sepete Ekle"
+        Height="40"
+        Background="#29A847"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="7"
+        FontWeight="SemiBold"
+        HorizontalAlignment="Stretch"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Click="AddExteriorToCart_Click"/>
+
+            </Grid>
+
+        </Grid>
+
+    </Border>
+
+</DataTemplate>
+
+</ItemsControl.ItemTemplate>
+
+</ItemsControl>
+
+<TextBlock
+    x:Name="ExteriorResultTextBlock"
+    FontSize="15"
+    FontWeight="SemiBold"
+    HorizontalAlignment="Center"
+    TextAlignment="Center"
+    Margin="0,5,0,15"/>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Grid>
+    <!-- ================================= -->
+    <!-- HAMMADDELER -->
+    <!-- ================================== -->
+
+<Grid
+    x:Name="MaterialsPanel"
+    IsVisible="False">
+
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Margin="0,0,0,20">
+
+        <TextBlock
+            Text="Hammaddeler"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="#10233F"
+            Margin="0,30,0,0"/>
+
+        <TextBlock
+            Text="Hammaddeleri inceleyip sepete ekleyebilirsiniz."
+            FontSize="16"
+            Foreground="#607085"
+            Margin="0,20,0,0"/>
+
+    </StackPanel>
+
+    <ScrollViewer
+        Grid.Row="1"
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled">
+
+        <StackPanel>
+
+<ItemsControl ItemsSource="{Binding RawMaterials}">
+
+    <ItemsControl.ItemsPanel>
+
+        <ItemsPanelTemplate>
+
+            <WrapPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"/>
+
+        </ItemsPanelTemplate>
+
+    </ItemsControl.ItemsPanel>
+
+    <ItemsControl.ItemTemplate>
+
+        <DataTemplate x:DataType="models:RawMaterial">
+
+    <Border
+        Width="245"
+        Height="410"
+        Background="White"
+        BorderBrush="#D8E0E8"
+        BorderThickness="1"
+        CornerRadius="10"
+        Padding="15"
+        Margin="0,0,15,15">
+
+        <Grid RowDefinitions="165,Auto,*,Auto,Auto">
+
+        <!-- RESİM -->
+
+        <Border
+            Grid.Row="0"
+            Background="#FAFAFA"
+            CornerRadius="8">
+
+            <Image
+    Source="{Binding MaterialImage}"
+    Width="200"
+    Height="155"
+    Stretch="Uniform"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"/>
+
+        </Border>
+
+        <!-- HAMMADDE ADI -->
+
+        <TextBlock
+            Grid.Row="1"
+            Text="{Binding MaterialName}"
+            FontSize="16"
+            FontWeight="Bold"
+            Margin="0,10,0,4"
+            TextWrapping="Wrap"/>
+
+    <!-- AÇIKLAMA -->
+
+    <TextBlock
+        Grid.Row="2"
+        Text="{Binding Explanation}"
+        FontSize="13"
+        Foreground="#666666"
+        TextWrapping="Wrap"/>
+
+    <!-- STOK VE FİYAT -->
+
+    <StackPanel
+        Grid.Row="3"
+        Spacing="8"
+        Margin="0,12,0,12">
+
+        <Grid ColumnDefinitions="Auto,*">
+
+    <TextBlock
+        Text="Stok"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding StockAmount}"/>
+
+        <TextBlock Text="kg"/>
+
+    </StackPanel>
+
+</Grid>
+
+<Grid ColumnDefinitions="Auto,*">
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding UnitPrice,
+                StringFormat={}{0:0.00}}"/>
+
+        <TextBlock Text="TL"/>
+
+    </StackPanel>
+
+</Grid>
+
+</StackPanel>
+
+<!-- FAVORİ VE SEPET BUTONLARI -->
+
+<Grid
+Grid.Row="4"
+ColumnDefinitions="60,*"
+ColumnSpacing="8">
+
+<Button
+    Grid.Column="0"
+    Content="&#x2764;"
+    Width="50"
+    Height="40"
+    Background="#BA1F2C"
+    Foreground="White"
+    BorderThickness="0"
+    CornerRadius="7"
+    FontSize="18"
+    FontWeight="Bold"
+    HorizontalAlignment="Left"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Click="AddMaterialToFavorites_Click"/>
+
+<Button
+    Grid.Column="1"
+    Content="Sepete Ekle"
+    Height="40"
+    Background="#29A847"
+    Foreground="White"
+    BorderThickness="0"
+    CornerRadius="7"
+    FontWeight="SemiBold"
+    HorizontalAlignment="Stretch"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Click="AddMaterialToCart_Click"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+    </DataTemplate>
+
+</ItemsControl.ItemTemplate>
+
+</ItemsControl>
+
+<TextBlock
+    x:Name="MaterialResultTextBlock"
+    FontSize="15"
+    FontWeight="SemiBold"
+    HorizontalAlignment="Center"
+    TextAlignment="Center"
+    Margin="0,5,0,15"/>
+
+        </StackPanel>
+
+    </ScrollViewer>
+
+</Grid>
+
+<!-- ==================================================== -->
+<!-- ================= FAVORİLER PANELİ ================= -->
+<!-- ===================================================== -->
+
+<Grid
+x:Name="FavoritesPanel"
+IsVisible="False">
+
+<Grid.RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+<StackPanel
+    Grid.Row="0"
+    Margin="0,0,0,20">
+
+    <TextBlock
+        Text="Favoriler"
+        FontSize="30"
+        FontWeight="Bold"
+        Foreground="#10233F"
+        Margin="0,30,0,0"/>
+
+    <TextBlock
+        Text="Beğendiğiniz ürünleri burada görüntüleyebilirsiniz."
+        FontSize="16"
+        Foreground="#607085"
+        Margin="0,20,0,0"/>
+
+</StackPanel>
+
+<ScrollViewer
+    Grid.Row="1"
+    VerticalScrollBarVisibility="Auto"
+    HorizontalScrollBarVisibility="Disabled">
+
+    <ItemsControl ItemsSource="{Binding FavoriteItems}">
+
+        <ItemsControl.ItemsPanel>
+
+            <ItemsPanelTemplate>
+
+                <WrapPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"/>
+
+            </ItemsPanelTemplate>
+
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemTemplate>
+
+            <DataTemplate x:DataType="models:FavoriteItem">
+
+<Border
+Width="245"
+Height="410"
+Background="White"
+BorderBrush="#D8E0E8"
+BorderThickness="1"
+CornerRadius="10"
+Padding="15"
+Margin="0,0,15,15">
+
+<Grid RowDefinitions="165,Auto,*,Auto,Auto">
+
+<Border
+    Grid.Row="0"
+    Background="#FAFAFA"
+    CornerRadius="8">
+
+    <Image
+        Source="{Binding FavoriteImage}"
+        Width="200"
+        Height="155"
+        Stretch="Uniform"/>
+
+</Border>
+
+<TextBlock
+    Grid.Row="1"
+    Text="{Binding ProductName}"
+    FontSize="16"
+    FontWeight="Bold"
+    Margin="0,10,0,4"
+    TextWrapping="Wrap"/>
+
+<TextBlock
+    Grid.Row="2"
+    Text="{Binding Explanation}"
+    FontSize="13"
+    Foreground="#666666"
+    TextWrapping="Wrap"/>
+
+<Grid
+    Grid.Row="3"
+    ColumnDefinitions="Auto,*"
+    Margin="0,12,0,12">
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontWeight="SemiBold"/>
+
+    <StackPanel
+        Grid.Column="1"
+        Orientation="Horizontal"
+        HorizontalAlignment="Right"
+        Spacing="4">
+
+        <TextBlock
+            Text="{Binding UnitPrice,
+                StringFormat={}{0:0.00}}"/>
+
+        <TextBlock Text="TL"/>
+
+    </StackPanel>
+
+</Grid>
+
+<!-- YILDIZ-->
+ 
+<StackPanel Grid.Row="4" Spacing="8">
+
+    <StackPanel
+        Orientation="Horizontal"
+        HorizontalAlignment="Center"
+        Spacing="6">
+
+        <Button Content="☆"
+                Tag="1"
+                Width="35"
+                Height="35"
+                FontSize="20"
+                Padding="0,-10,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="0,-2,0,0"
+                Click="Star_Click"/>
+
+        <Button Content="☆"
+                Tag="2"
+                Width="35"
+                Height="35"
+                FontSize="20"
+                Padding="0,-10,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="0,-2,0,0"
+                Click="Star_Click"/>
+
+        <Button Content="☆"
+                Tag="3"
+                Width="35"
+                Height="35"
+                FontSize="20"
+                Padding="0,-10,0,0"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="0,-2,0,0"
+                Click="Star_Click"/>
+
+    </StackPanel>
+
+    <Button
+        Content="Favorilerden Çıkar"
+        Height="40"
+        Background="#BA1F2C"
+        Foreground="White"
+        BorderThickness="0"
+        CornerRadius="7"
+         HorizontalAlignment="Center"
+         VerticalAlignment="Center"
+        FontWeight="SemiBold"
+        Click="RemoveFavorite_Click"/>
+
+</StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </DataTemplate>
+
+</ItemsControl.ItemTemplate>
+
+</ItemsControl>
+
+</ScrollViewer>
+
+</Grid>
+
+
+<!-- ================= SEPET ================= -->
+
+<Grid
+x:Name="CartPanel"
+IsVisible="False">
+
+<Grid.RowDefinitions>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="*"/>
+<RowDefinition Height="Auto"/>
+</Grid.RowDefinitions>
+
+<StackPanel Margin="0,0,0,20">
+
+<TextBlock
+    Text="Sepet"
+    FontSize="30"
+    FontWeight="Bold"
+    Foreground="#10233F"
+    Margin="0,30,0,0"/>
+
+<TextBlock
+    Text="Sepete eklediğiniz ürünler burada gösterilir."
+    FontSize="16"
+    Foreground="#607085"
+    Margin="0,20,0,0"/>
+
+</StackPanel>
+
+<Border
+Grid.Row="1"
+Background="White"
+BorderBrush="#D8E0E8"
+BorderThickness="1"
+CornerRadius="10"
+Padding="20">
+
+<ScrollViewer>
+
+    <TextBlock
+        x:Name="CartItemsTextBlock"
+        Text="Sepetiniz şu anda boş."
+        FontSize="17"
+        Foreground="#3D4B5C"
+        TextWrapping="Wrap"/>
+
+</ScrollViewer>
+
+</Border>
+
+<Border
+Grid.Row="2"
+Background="White"
+BorderBrush="#D8E0E8"
+BorderThickness="1"
+CornerRadius="10"
+Padding="20"
+Margin="0,20,0,0">
+
+<StackPanel Spacing="15">
+
+<Grid>
+
+<TextBlock
+    Text="Toplam Tutar"
+    FontSize="20"
+    FontWeight="Bold"/>
+
+<TextBlock
+    x:Name="TotalPriceTextBlock"
+    Text="0,00 TL"
+    FontSize="20"
+    FontWeight="Bold"
+    Foreground="#1677FF"
+    HorizontalAlignment="Right"/>
+
+</Grid>
+
+<Button
+    Content="Satın Almayı Onayla"
+    Height="48"
+    Background="#1677FF"
+    Foreground="White"
+    BorderThickness="0"
+    CornerRadius="8"
+    FontSize="16"
+    FontWeight="SemiBold"
+    HorizontalContentAlignment="Center"
+    VerticalContentAlignment="Center"
+    Click="ConfirmPurchaseButton_Click"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

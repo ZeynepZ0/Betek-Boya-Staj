@@ -1,0 +1,88 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.RuntimeIdentifier = 
+build_property.AppHostRuntimeIdentifier = osx-arm64
+build_property.DefaultAppHostRuntimeIdentifier = osx-arm64
+build_property.NETCoreSdkPortableRuntimeIdentifier = osx-arm64
+build_property.IsTestProject = 
+build_property.ProjectAssetsFile = /Users/zeynepzorba/Desktop/Paint/obj/project.assets.json
+build_property.ProjectDepsFilePath = /Users/zeynepzorba/Desktop/Paint/bin/Debug/net10.0/Paint.deps.json
+build_property.ProjectRuntimeConfigFilePath = /Users/zeynepzorba/Desktop/Paint/bin/Debug/net10.0/Paint.runtimeconfig.json
+build_property.IntermediateOutputPath = obj/Debug/net10.0/
+build_property.PublishDir = bin/Debug/net10.0/publish/
+build_property.AvaloniaMainPackageVersion = 11.3.0
+build_property.HasAvaloniaDiagnosticsSupport = 
+build_property.AvaloniaUseCompiledBindingsByDefault = true
+build_property.AvaloniaPreviewerNetCoreToolPath = /Users/zeynepzorba/.nuget/packages/avalonia/11.3.0/buildTransitive//../tools/netstandard2.0/designer/Avalonia.Designer.HostApp.dll
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkVersion = v10.0
+build_property.EntryPointFilePath = 
+build_property.RootNamespace = Paint
+build_property.ProjectDir = /Users/zeynepzorba/Desktop/Paint/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/zeynepzorba/Desktop/Paint/AdminWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/BoyaEkleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/BoyaGuncelleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/ExteriorBoyaEkleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/ExteriorPaintGuncelleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/ManagerPanelWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/RawMaterialEkleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/RawMaterialGuncelleWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/RegisterWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/UserPanelWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/zeynepzorba/Desktop/Paint/UserWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

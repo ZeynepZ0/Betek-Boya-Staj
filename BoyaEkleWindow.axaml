@@ -1,0 +1,149 @@
+<!-- =========================-->
+<!-- İÇ CEPHE BOYASI EKLEME FORMU-->
+<!-- =========================-->
+
+   <!-- BOYAEKLEWİNDOW.CS DOSYASINA BAĞLADIM-->
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Paint.Views.BoyaEkleWindow"  
+
+        Width="450"
+        Height="680"
+        Title="Boya Ekle"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False">
+ 
+
+<Border
+    Padding="30"
+    Background="#F5F7FA">
+
+    <StackPanel Spacing="12">
+
+<!-- İÇ CEPHE BOYASI EKLE BAŞLIĞI-->
+
+    <TextBlock
+        Text="İç Cephe Boyası Ekle"
+        FontSize="26"
+        FontWeight="Bold"
+        Foreground="#092A4A"
+        HorizontalAlignment="Center"
+        Margin="0,0,0,10"/>
+
+<!-- BOYA ADI -->
+ 
+    <TextBlock
+        Text="Boya Adı"
+        FontWeight="SemiBold"/>
+
+    <TextBox
+        x:Name="BoyaAdiTextBox"
+        Height="40"
+        Watermark="Boya adını giriniz"/>
+
+<!-- AÇIKLAMA -->
+
+    <TextBlock
+        Text="Açıklama"
+        FontWeight="SemiBold"/>
+
+    <TextBox
+        x:Name="AciklamaTextBox"
+        Height="80"
+        AcceptsReturn="True"
+        TextWrapping="Wrap"
+        Watermark="Açıklama giriniz"/>
+
+<!-- STOK -->
+
+    <TextBlock
+        Text="Stok"
+        FontWeight="SemiBold"/>
+
+         <!-- TEXTBOX YERİNE SAYI GİRİLMESİNİ SAĞLIYOR -->
+    <NumericUpDown  
+        x:Name="StokNumericUpDown"
+        Height="40"
+        Minimum="0"
+        Maximum="100000"
+        Increment="1"
+        FormatString="0"
+        Value="0"/>
+
+<!-- FİYAT -->
+
+    <TextBlock
+        Text="Birim Fiyat"
+        FontWeight="SemiBold"/>
+
+    <NumericUpDown
+        x:Name="FiyatNumericUpDown"
+        Height="40"
+        Minimum="0"
+        Maximum="1000000"
+        Increment="1"
+        Value="0"
+        FormatString="0.00"/>
+
+
+<!-- FOTOĞRAF EKLEME -->
+
+        <TextBlock
+    Text="Fotoğraf Yolu"
+    FontWeight="SemiBold"/>
+
+<TextBox
+    x:Name="PictureTextBox"
+    Height="40"
+    Watermark="avares://Paint/Assets/resim.jpeg"/>
+
+<!-- HATA VEYA SONUÇ MESAJI BURDA GÖZÜKECEK -->
+<TextBlock
+    x:Name="ResultTextBlock"
+    Foreground="#D64545"
+    FontSize="14"
+    FontWeight="SemiBold"
+    HorizontalAlignment="Center"
+    TextAlignment="Center"
+    TextWrapping="Wrap"
+    Margin="0,5,0,0"/>
+
+<Grid
+    ColumnDefinitions="*,*"
+    ColumnSpacing="10"
+    Margin="0,10,0,0">
+
+<!-- İÇ CEPHE BOYASI EKLE FORMUNDA İPTAL BUTONU -->
+
+    <Button
+        Grid.Column="0"
+        Content="İptal"
+        Height="42"
+        Background="#E53935"
+        Foreground="White"
+        CornerRadius="8"
+        HorizontalContentAlignment="Center"
+        Click="IptalButton_Click"/>
+
+
+<!-- İÇ CEPHE BOYASI EKLE FORMUNDA KAYDET BUTONU -->
+
+    <Button
+        Grid.Column="1"
+        Content="Kaydet"
+        Height="42"
+        Background="#00A83B"
+        Foreground="White"
+        CornerRadius="8"
+        FontWeight="SemiBold"
+        HorizontalContentAlignment="Center"
+        Click="KaydetButton_Click"/>
+
+            </Grid>
+
+        </StackPanel>
+
+    </Border>
+
+</Window>
