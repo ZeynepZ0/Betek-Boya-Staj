@@ -1,4 +1,4 @@
-## 📌 Proje Hakkında
+## Proje Hakkında
 
 Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı dostu bir arayüz üzerinden yönetebilmesini sağlamaktadır. Projeyi geliştirirken masaüstü uygulama geliştirme, veritabanı yönetimi ve kullanıcı arayüzü tasarımı konularında deneyim kazandım.
 
@@ -11,7 +11,7 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 - SQLite veritabanı entegrasyonu
 - Avalonia UI ile geliştirilmiş modern masaüstü arayüzü
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 - C#
 - .NET
@@ -19,7 +19,7 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 - SQLite
 - Git & GitHub
 
- ## 📸 Uygulama Görselleri
+ ## Uygulama Görselleri
 
 <table>
 <tr>
@@ -56,13 +56,13 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 </tr>
 </table>
 
-## 🎯 Bu Projede Neler Öğrendim?
+## Bu Projede Neler Öğrendim?
 
 - C# ile masaüstü uygulama geliştirmeyi
 - Avalonia UI kullanarak kullanıcı arayüzü tasarlamayı
 - SQLite ile veritabanı işlemleri yapmayı
 
-## 👩‍💻 Geliştirici
+## Geliştirici
 
 **Zeynep Zorba**
 
@@ -74,15 +74,15 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 .
 .
 .
-## 🎨 Betek Boya Management System
+## Betek Boya Management System
 
 
 
-## 📌 About the Project
+## About the Project
 
 This desktop application was developed during my Software Engineering internship at **Betek Boya**. The project aims to provide a simple paint and stock management system while improving my C# desktop application development skills.
 
-## ✨ Features
+## Features
 
 - 👤 User & Admin Login
 - 🎨 Interior & Exterior Paint Management
@@ -91,7 +91,7 @@ This desktop application was developed during my Software Engineering internship
 - 🗄️ SQLite Database Integration
 - 🖥️ Modern Desktop Interface with Avalonia UI
 
-## 🛠️ Technologies
+## Technologies
 
 - C#
 - .NET
@@ -99,7 +99,7 @@ This desktop application was developed during my Software Engineering internship
 - SQLite
 - Git & GitHub
 
-## 📚 What I Learned
+## What I Learned
 
 - Desktop application development with C#
 - Database management using SQLite
