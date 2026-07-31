@@ -22,22 +22,22 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
  ## 📸 Uygulama Görselleri
 
 ### ANA MENÜ
-<img src="Screenshots/main.png" width="850">
+<img src="ScreenShots/main.png" width="850">
 
 ### YÖNETİCİ GİRİŞİ
-<img src="Screenshots/yöneticigirişi.png" width="850">
+<img src="ScreenShots/yöneticigirişi.png" width="850">
 
 ### YÖNETİCİ PANELİ
-<img src="Screenshots/managerpanel.png" width="850">
+<img src="ScreenShots/managerpanel.png" width="850">
 
 ### KULLANICI GİRİŞİ
-<img src="Screenshots/kullanıcıgirişi.png" width="850">
+<img src="ScreenShots/kullanıcıgirişi.png" width="850">
 
 ### KULLANICI KAYIT OL
-<img src="Screenshots/kullanıcıkayıtol.png" width="850">
+<img src="ScreenShots/kullanıcıkayıtol.png" width="850">
 
 ### KULLANICI PANELİ
-<img src="Screenshots/kullanıcıpanel.png" width="850">
+<img src="ScreenShots/kullanıcıpanel.png" width="850">
 
 
 ## 🎯 Bu Projede Neler Öğrendim?
