@@ -2,7 +2,7 @@
 
 Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı dostu bir arayüz üzerinden yönetebilmesini sağlamaktadır. Projeyi geliştirirken masaüstü uygulama geliştirme, veritabanı yönetimi ve kullanıcı arayüzü tasarımı konularında deneyim kazandım.
 
- ✨ Özellikler
+ Özellikler
 
 - Yönetici ve kullanıcı giriş sistemi
 - İç cephe ve dış cephe boya yönetimi
@@ -84,12 +84,12 @@ This desktop application was developed during my Software Engineering internship
 
 ## Features
 
-- 👤 User & Admin Login
-- 🎨 Interior & Exterior Paint Management
-- 📦 Stock Management
-- ➕ Add, Update and Delete Products
-- 🗄️ SQLite Database Integration
-- 🖥️ Modern Desktop Interface with Avalonia UI
+-  User & Admin Login
+- Interior & Exterior Paint Management
+- Stock Management
+- Add, Update and Delete Products
+- SQLite Database Integration
+- Modern Desktop Interface with Avalonia UI
 
 ## Technologies
 
