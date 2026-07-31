@@ -21,24 +21,40 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 
  ## 📸 Uygulama Görselleri
 
-### ANA MENÜ
-<img src="ScreenShots/main.png" width="850">
+<table>
+<tr>
+<td align="center">
+<b>Ana Menü</b><br>
+<img src="ScreenShots/main.png" width="450">
+</td>
+<td align="center">
+<b>Yönetici Girişi</b><br>
+<img src="ScreenShots/yoneticigirisi.png" width="450">
+</td>
+</tr>
 
-### YÖNETİCİ GİRİŞİ
-<img src="ScreenShots/yoneticigirisi.png" width="850">
+<tr>
+<td align="center">
+<b>Yönetici Paneli</b><br>
+<img src="ScreenShots/managerpanel.png" width="450">
+</td>
+<td align="center">
+<b>Kullanıcı Girişi</b><br>
+<img src="ScreenShots/kullanıcıgirisi.png" width="450">
+</td>
+</tr>
 
-### YÖNETİCİ PANELİ
-<img src="ScreenShots/managerpanel.png" width="850">
-
-### KULLANICI GİRİŞİ
-<img src="ScreenShots/kullanıcıgirisi.png" width="850">
-
-### KULLANICI KAYIT OL
-<img src="ScreenShots/kullanıcıkayıtol.png" width="850">
-
-### KULLANICI PANELİ
-<img src="ScreenShots/kullanıcıpanel.png" width="850">
-
+<tr>
+<td align="center">
+<b>Kullanıcı Kayıt Ol</b><br>
+<img src="ScreenShots/kullanıcıkayıtol.png" width="450">
+</td>
+<td align="center">
+<b>Kullanıcı Paneli</b><br>
+<img src="ScreenShots/kullanıcıpanel.png" width="450">
+</td>
+</tr>
+</table>
 
 ## 🎯 Bu Projede Neler Öğrendim?
 
