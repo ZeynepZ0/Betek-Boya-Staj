@@ -963,43 +963,46 @@ Margin="0,0,15,15">
  
 <StackPanel Grid.Row="4" Spacing="8">
 
-    <StackPanel
-        Orientation="Horizontal"
-        HorizontalAlignment="Center"
-        Spacing="6">
+<StackPanel
+    Orientation="Horizontal"
+    HorizontalAlignment="Center"
+    Spacing="6">
 
-        <Button Content="☆"
-                Tag="1"
-                Width="35"
-                Height="35"
-                FontSize="20"
-                Padding="0,-10,0,0"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Margin="0,-2,0,0"
-                Click="Star_Click"/>
+    <Button Content="☆"
+            Tag="1"
+            Width="35"
+            Height="35"
+            FontSize="20"
+            Padding="0,-10,0,0"
+             Foreground="Gray"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Margin="0,-2,0,0"
+            Click="Star_Click"/>
 
-        <Button Content="☆"
-                Tag="2"
-                Width="35"
-                Height="35"
-                FontSize="20"
-                Padding="0,-10,0,0"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Margin="0,-2,0,0"
-                Click="Star_Click"/>
+    <Button Content="☆"
+            Tag="2"
+            Width="35"
+            Height="35"
+            FontSize="20"
+            Padding="0,-10,0,0"
+             Foreground="Gray"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Margin="0,-2,0,0"
+            Click="Star_Click"/>
 
-        <Button Content="☆"
-                Tag="3"
-                Width="35"
-                Height="35"
-                FontSize="20"
-                Padding="0,-10,0,0"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                Margin="0,-2,0,0"
-                Click="Star_Click"/>
+    <Button Content="☆"
+            Tag="3"
+            Width="35"
+            Height="35"
+            FontSize="20"
+            Padding="0,-10,0,0"
+             Foreground="Gray"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Margin="0,-2,0,0"
+            Click="Star_Click"/>
 
     </StackPanel>
 

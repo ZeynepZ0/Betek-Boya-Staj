@@ -1156,29 +1156,32 @@ VALUES
         insert.ExecuteNonQuery();
     }
 
-    LoadFavorites();
-    if (sender is Button clickedButton)
+    
+  if (sender is Button clickedButton)
 {
-    var panel = clickedButton.Parent as StackPanel;
-
-    if (panel != null)
+    if (clickedButton.Parent is StackPanel panel)
     {
         foreach (var child in panel.Children)
         {
-            if (child is Button starButton && starButton.Tag != null)
+            if (child is Button starButton)
             {
-                int value = int.Parse(starButton.Tag.ToString()!);
+                int value = int.Parse(starButton.Tag!.ToString()!);
 
-                if (favorite.Star >= value)
+                if (value <= favorite.Star)
+                {
+                    starButton.Content = "★";
                     starButton.Foreground = Brushes.Gold;
+                }
                 else
+                {
+                    starButton.Content = "☆";
                     starButton.Foreground = Brushes.Gray;
+                }
             }
         }
     }
 }
 }
-
 
 // ===========================================================
 // FAVORİLERDEN ÇIKAR
