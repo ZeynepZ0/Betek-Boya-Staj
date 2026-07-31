@@ -25,13 +25,13 @@ Bu uygulama, yöneticilerin boya ürünlerini ve stok bilgilerini kullanıcı do
 <img src="ScreenShots/main.png" width="850">
 
 ### YÖNETİCİ GİRİŞİ
-<img src="ScreenShots/yöneticigirişi.png" width="850">
+<img src="ScreenShots/yoneticigirisi.png" width="850">
 
 ### YÖNETİCİ PANELİ
 <img src="ScreenShots/managerpanel.png" width="850">
 
 ### KULLANICI GİRİŞİ
-<img src="ScreenShots/kullanıcıgirişi.png" width="850">
+<img src="ScreenShots/kullanıcıgirisi.png" width="850">
 
 ### KULLANICI KAYIT OL
 <img src="ScreenShots/kullanıcıkayıtol.png" width="850">
