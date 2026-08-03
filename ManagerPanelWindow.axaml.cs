@@ -764,31 +764,12 @@ private void LoadPendingOrders()
 {
     PendingOrders.Clear();
 
-    using var connection = DatabaseHelper.GetConnection();
-    connection.Open();
+    List<Order> orders =
+        DatabaseHelper.GetPendingOrders();
 
-    const string sql = @"
-SELECT
-    OrderID,
-    CustomerName,
-    Status
-FROM Orders
-WHERE Status='Bekliyor'
-ORDER BY OrderID;";
-
-    using var command = connection.CreateCommand();
-    command.CommandText = sql;
-
-    using var reader = command.ExecuteReader();
-
-    while (reader.Read())
+    foreach (Order order in orders)
     {
-        PendingOrders.Add(new Order
-        {
-            OrderID = reader.GetInt32(0),
-            CustomerName = reader.GetString(1),
-            Status = reader.GetString(2)
-        });
+        PendingOrders.Add(order);
     }
 }
 
@@ -813,8 +794,7 @@ private void ShowOrdersPanel()
 
     private static void SetSelectedButton(Button button)
     {
-        button.Background =
-            new SolidColorBrush(Color.Parse("#1677FF"));
+        button.Background = new SolidColorBrush(Color.Parse("#1677FF"));
     }
 
     private static void SetNormalButton(Button button)

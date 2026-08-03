@@ -134,7 +134,7 @@
     BorderBrush="Gray"
     BorderThickness="1"
     CornerRadius="8"
-    FontSize="16"
+  
     HorizontalContentAlignment="Center"
     VerticalContentAlignment="Center"
     Click="GeriButton_Click"/>
